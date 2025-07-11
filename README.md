@@ -69,22 +69,22 @@ A: These are some approachs I would try
 * Cost Control by setting up cost alerts and budget tracking
 
 #### 2. We handle data needs of several clients, and each one needs different data sources. Some sources may overlap (for example, many clients need data from Google Ads and Meta Ads), but in other cases we need client-specific sources. How do you envision the database structure we need to make it easily maintainable and scalable?
-A: I would map all equivalent fields across sources and structure the data using a unified schema for all clients, using a client_id field to differentiate them.
+A: I map all equivalent fields across sources and structure the data using a unified schema for all clients, using a client_id field to differentiate them.
 
 #### 3. Consider the campaign_name in your Google Ads or Meta Ads data. Campaign names can change over time. How would you model this in BigQuery to track the history of campaign names for reporting purposes?
 A: I would store multiple records per campaign, each with a validity period defined by start and end dates to indicate when a specific campaign name was active. When the campaign name changes, I would use a query to close the previous record by setting its end date and insert a new record with the updated name and an open-ended validity period.
 
 #### 4. Imagine one of your daily data pipelines (either a Coupler/Airbyte sync or a custom Python Cloud Run Job) fails unexpectedly. This could be due to a source system outage, API changes, or a bug in the code. Describe your process for:
 #### A. Detecting the failure.
-A:
+A: I rely on alerts from Airbyte or Cloud Monitoring (for Cloud Run jobs), check centralized logs, success flags, and data validations in BigQuery (e.g., missing or incomplete data).
 #### B. Diagnosing the root cause.
-A:
+A: I review error logs or config changes. For source issues, I check API responses or source system status. For data issues, I compare with previous runs.
 #### C. Implementing a fix.
-A:
+A: I patch the issue, test locally or in staging, then redeploy the job. If needed, I manually backfill the failed data.
 #### D. Ensuring the data is eventually consistent and complete in BigQuery.
-A:
+A: I trigger a backfill for the failed period, validating record counts and key metrics against the source. I also run data quality checks to confirm no duplicates or gaps exist.
 #### E. What monitoring and alerting mechanisms would you put in place to prevent or quickly address future failures?
-A:
+A: Automated failure alerts, retry with backoff and dashboards for health.
 
  
  
