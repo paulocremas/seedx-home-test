@@ -14,7 +14,7 @@ __Note:__ Logs and error handling were left out given the test nature of the pro
 ---
 
 <a id="python"></a>
-### _Python Data Extraction and Processing_
+### [_Python Data Extraction and Processing_](https://github.com/paulocremas/seedx-home-test/tree/main/1.%20Python%20Data%20Extraction%20and%20Processing)
 
 ### [Config](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/config.py)
 This module has __4 classes__
@@ -45,10 +45,13 @@ This module has __1 function__
 This module has __1 function__
 
 1. __load:__ Checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
+<br>
+
+#### [Dockerfile](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/Dockerfile)
 
 ---
 <a id="data"></a>
-### _Data Modeling and SQL_
+### [_Data Modeling and SQL_](https://github.com/paulocremas/seedx-home-test/tree/main/2.%20Data%20Modeling%20and%20SQL)
 ### 1.1 [Schema Design](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.1%20Schema%20Design.sql)
 Unified daily campaign data. Partitioned by date, clustered by client_id, platform, campaign_id. reach is Meta-only.
 
