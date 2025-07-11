@@ -1,12 +1,12 @@
 # SeedX Take Home Test
 #### Approach & Reasoning:
-For the Python project, __I aimed to make it scalable and robust.__ I implemented a transform function to allow changes to the sales objects, __and designed a load function to insert data into BigQuery__. 
+For the Python project, __I aimed to make it scalable and robust,__, although I recognize the project’s simple premise doesn’t require such complexity. I implemented a transform function to allow changes to the sales objects, __and designed a load function to insert data into BigQuery__. 
 
 I didn’t follow any specific methodology when structuring the project, the current structure is one I developed on my own. That said, I’m fully open to adapting to the team’s standards and learning as we go.
 
 __Note:__ Logs and error handling were left out given the test nature of the project.
 
-### Summary
+### _Summary_
 1. [Python Data Extraction and Processing](#python)
 2. [Data Modeling and SQL](#data)
 3. [Interview Questions](#interview)
@@ -14,9 +14,8 @@ __Note:__ Logs and error handling were left out given the test nature of the pro
 ---
 
 <a id="python"></a>
-# Python Data Extraction and Processing
+### _Python Data Extraction and Processing_
 
-### _Modules_
 ### [Config](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/config.py)
 This module has __4 classes__
 
@@ -49,7 +48,7 @@ This module has __1 function__
 
 ---
 <a id="data"></a>
-# Data Modeling and SQL
+### _Data Modeling and SQL_
 ### 1.1 [Schema Design](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.1%20Schema%20Design.sql)
 Unified daily campaign data. Partitioned by date, clustered by client_id, platform, campaign_id. reach is Meta-only.
 
@@ -61,7 +60,7 @@ Calculates daily spend per platform for client_ABC, summing cost_usd, grouped by
 ### 1.2.3 [Client Performance](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.3%20Client%20Performance.sql)
 ---
 <a id="interview"></a>
-# Interview Questions
+### _Interview Questions_
 #### 1. Our dashboards and queries are running slower than expected and we noticed high BigQuery costs. What are some strategies and techniques you would investigate and implement in this case?
 A: These are some approachs I would try
 * Monitoring and identifing heavy queries
