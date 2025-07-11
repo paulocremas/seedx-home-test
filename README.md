@@ -1,6 +1,6 @@
 # SeedX Take Home Test
 #### Approach & Reasoning:
-For this Python project, __I aimed to make it scalable and robust.__ I implemented a transform function to allow changes to the sales objects, __and designed a load function to insert data into BigQuery__. 
+For the Python project, __I aimed to make it scalable and robust.__ I implemented a transform function to allow changes to the sales objects, __and designed a load function to insert data into BigQuery__. 
 
 I didn’t follow any specific methodology when structuring the project, the current structure is one I developed on my own. That said, I’m fully open to adapting to the team’s standards and learning as we go.
 
@@ -46,10 +46,15 @@ This module has __1 function__
 1. __load:__ Checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
 
 ---
-
 <a id="data"></a>
 # Data Modeling and SQL
+### 1.1 Schema Design
 
+### 1.2.1 Daily Total Cost per Client and Platform
+
+### 1.2.2 Top 5 Campaigns (Last 30 Days)
+
+### 1.2.3 Client Performance
 ---
 <a id="interview"></a>
 # Interview Questions
