@@ -4,6 +4,8 @@ For the Python project, __I aimed to make it scalable and robust.__ I implemente
 
 I didn’t follow any specific methodology when structuring the project, the current structure is one I developed on my own. That said, I’m fully open to adapting to the team’s standards and learning as we go.
 
+__Note:__ Logs and error handling were left out given the test nature of the project.
+
 ### Summary
 1. [Python Data Extraction and Processing](#python)
 2. [Data Modeling and SQL](#data)
