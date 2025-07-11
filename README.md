@@ -56,8 +56,11 @@ Unified daily campaign data. Partitioned by date, clustered by client_id, platfo
 Calculates daily spend per platform for client_ABC, summing cost_usd, grouped by date and platform, ordered from newest to oldest.
 
 ### 1.2.2 [Top 5 Campaigns (Last 30 Days)](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.2%20Top%205%20Campaigns%20(Last%2030%20Days).sql)
+Uses CTEs to break down the query: the first aggregates cost and conversions per campaign in the last 30 days; the second calculates cost per conversion. Finally, it selects the top 5 campaigns by highest cost per conversion.
 
 ### 1.2.3 [Client Performance](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.3%20Client%20Performance.sql)
+Uses a CTE to set comparison months, then aggregates monthly metrics for client_ABC. Outputs monthly performance with cost per conversion.
+
 ---
 <a id="interview"></a>
 ### _Interview Questions_
