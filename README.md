@@ -1,6 +1,15 @@
+# SeedX Take Home Test
+#### Approach & Reasoning:
+For this Python project, __I aimed to make it scalable and robust.__ I implemented a transform function to allow changes to the sales objects, __and designed a load function to insert data into BigQuery__. 
+
+I didn’t follow any specific methodology when structuring the project, the current structure is one I developed on my own. That said, I’m fully open to adapting to the team’s standards and learning as we go.
+
+### Summary
 1. [Python Data Extraction and Processing](#python)
 2. [Data Modeling and SQL](#data)
 3. [Interview Questions](#interview)
+
+---
 
 <a id="python"></a>
 # Python Data Extraction and Processing
