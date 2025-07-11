@@ -51,8 +51,10 @@ This module has __1 function__
 <a id="data"></a>
 # Data Modeling and SQL
 ### 1.1 [Schema Design](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.1%20Schema%20Design.sql)
+Unified daily campaign data. Partitioned by date, clustered by client_id, platform, campaign_id. reach is Meta-only.
 
 ### 1.2.1 [Daily Total Cost per Client and Platform](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.1%20Daily%20Total%20Cost%20per%20Client%20and%20Platform.sql)
+Calculates daily spend per platform for client_ABC, summing cost_usd, grouped by date and platform, ordered from newest to oldest.
 
 ### 1.2.2 [Top 5 Campaigns (Last 30 Days)](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.2%20Top%205%20Campaigns%20(Last%2030%20Days).sql)
 
@@ -60,3 +62,30 @@ This module has __1 function__
 ---
 <a id="interview"></a>
 # Interview Questions
+#### 1. Our dashboards and queries are running slower than expected and we noticed high BigQuery costs. What are some strategies and techniques you would investigate and implement in this case?
+A: These are some approachs I would try
+* Monitoring and identifing heavy queries
+* Query review and optimzation
+* Partitioning and Clustering
+* Cost Control by setting up cost alerts and budget tracking
+
+#### 2. We handle data needs of several clients, and each one needs different data sources. Some sources may overlap (for example, many clients need data from Google Ads and Meta Ads), but in other cases we need client-specific sources. How do you envision the database structure we need to make it easily maintainable and scalable?
+A: I would map all equivalent fields across sources and structure the data using a unified schema for all clients, using a client_id field to differentiate them.
+
+#### 3. Consider the campaign_name in your Google Ads or Meta Ads data. Campaign names can change over time. How would you model this in BigQuery to track the history of campaign names for reporting purposes?
+A: I would store multiple records per campaign, each with a validity period defined by start and end dates to indicate when a specific campaign name was active. When the campaign name changes, I would use a query to close the previous record by setting its end date and insert a new record with the updated name and an open-ended validity period.
+
+#### 4. Imagine one of your daily data pipelines (either a Coupler/Airbyte sync or a custom Python Cloud Run Job) fails unexpectedly. This could be due to a source system outage, API changes, or a bug in the code. Describe your process for:
+#### A. Detecting the failure.
+A:
+#### B. Diagnosing the root cause.
+A:
+#### C. Implementing a fix.
+A:
+#### D. Ensuring the data is eventually consistent and complete in BigQuery.
+A:
+#### E. What monitoring and alerting mechanisms would you put in place to prevent or quickly address future failures?
+A:
+
+ 
+ 
