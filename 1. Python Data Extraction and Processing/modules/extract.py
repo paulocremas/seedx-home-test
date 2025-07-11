@@ -8,6 +8,7 @@ from modules.transform import Transform
 # Creates an object with all API request information
 API = API()
 
+
 # Requests the API
 def get_sales():
     response = requests.get(API.ENDPOINT, headers=API.HEADERS, params=API.PARAMS)
@@ -16,6 +17,7 @@ def get_sales():
     else:
         print(f"Erro: {response.status_code} - {response.text}")
         return None
+
 
 # Gets a list of the last N days (set it up on config.py)
 def get_last_n_days(n: int) -> List[str]:
@@ -30,13 +32,13 @@ def extract():
         API.PARAMS["page"] = 1
         API.PARAMS["date"] = date
 
-        # Repeats the API request for each page 
+        # Repeats the API request for each page
         while True:
             response = get_sales()
 
             if response.status_code != 200:
                 print(
-                    f"Failed to fetch data for {date} page {API.PARAMS["page"]}: {response.status_code}"
+                    f"Failed to fetch data for {date} page {API.PARAMS['page']}: {response.status_code}"
                 )
                 break
 
