@@ -50,13 +50,13 @@ This module has __1 function__
 ---
 <a id="data"></a>
 # Data Modeling and SQL
-### 1.1 Schema Design
+### 1.1 [Schema Design](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.1%20Schema%20Design.sql)
 
-### 1.2.1 Daily Total Cost per Client and Platform
+### 1.2.1 [Daily Total Cost per Client and Platform](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.1%20Daily%20Total%20Cost%20per%20Client%20and%20Platform.sql)
 
-### 1.2.2 Top 5 Campaigns (Last 30 Days)
+### 1.2.2 [Top 5 Campaigns (Last 30 Days)](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.2%20Top%205%20Campaigns%20(Last%2030%20Days).sql)
 
-### 1.2.3 Client Performance
+### 1.2.3 [Client Performance](https://github.com/paulocremas/seedx-home-test/blob/main/2.%20Data%20Modeling%20and%20SQL/1.2.3%20Client%20Performance.sql)
 ---
 <a id="interview"></a>
 # Interview Questions
