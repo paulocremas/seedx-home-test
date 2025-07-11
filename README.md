@@ -17,7 +17,7 @@ __Note:__ Logs and error handling were left out given the test nature of the pro
 # Python Data Extraction and Processing
 
 ### _Modules_
-### Config
+### [Config](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/config.py)
 This module has __4 classes__
 
 1. __API:__ stores endpoints, parameters (e.g. for pagination), and extraction range (e.g. number of days).
@@ -28,7 +28,7 @@ This module has __4 classes__
 
 4. __GoogleBigQuery:__ stores table ID, credentials, and initializes the BigQuery client.
  
-### Extract
+### [Extract](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/extract.py)
 This module has __3 functions__
 
 1. __extract:__ Iterates over the last N days (from config), resets API pagination per day, fetches sales pages via API calls, skips duplicates using a set of sale IDs, transforms valid sales, and appends them to DATA_TO_INSERT.
@@ -37,12 +37,12 @@ This module has __3 functions__
 
 3. __get_sales:__ Executes an API request using the current API configuration.
 
-### Transform
+### [Transform](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/transform.py)
 This module has __1 function__
 
 1. __transform:__ Converts a raw sale dictionary into a Sale object with defined attributes, then returns its dictionary representation.
 
-### Load
+### [Load](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/load.py)
 This module has __1 function__
 
 1. __load:__ Checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
