@@ -1,6 +1,11 @@
+1. [Python Data Extraction and Processing](#python)
+2. [Data Modeling and SQL](#data)
+3. [Interview Questions] (#interview)
+
+<a id="python"></a>
 # Python Data Extraction and Processing
 
-### Modules 
+### _Modules_
 ### Config
 This module has __4 classes__
 
@@ -11,8 +16,6 @@ This module has __4 classes__
 3. __DataToInsert:__ used to create a singleton-like object (DATA_TO_INSERT) that contains a pandas DataFrame which will store all data to be loaded into Google BigQuery.
 
 4. __GoogleBigQuery:__ stores table ID, credentials, and initializes the BigQuery client.
-
----
  
 ### Extract
 This module has __3 functions__
@@ -33,3 +36,11 @@ This module has __1 function__
 
 1. __load:__ Checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
 
+---
+
+<a id="data"></a>
+# Data Modeling and SQL
+
+---
+<a id="interview"></a>
+# Interview Questions
