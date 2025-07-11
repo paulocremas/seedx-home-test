@@ -78,7 +78,7 @@ A: These are some approachs I would try
 A: I map all equivalent fields across sources and structure the data using a unified schema for all clients, using a client_id field to differentiate them.
 
 #### 3. Consider the campaign_name in your Google Ads or Meta Ads data. Campaign names can change over time. How would you model this in BigQuery to track the history of campaign names for reporting purposes?
-A: I would store multiple records per campaign, each with a validity period defined by start and end dates to indicate when a specific campaign name was active. When the campaign name changes, I would use a query to close the previous record by setting its end date and insert a new record with the updated name and an open-ended validity period.
+A: I would store multiple records per campaign, each with a validity period defined by start and end dates to indicate when a specific campaign name was active. When the campaign name changes, I would use a query to close the previous record by setting its end date and insert a new record with the updated name.
 
 #### 4. Imagine one of your daily data pipelines (either a Coupler/Airbyte sync or a custom Python Cloud Run Job) fails unexpectedly. This could be due to a source system outage, API changes, or a bug in the code. Describe your process for:
 #### A. Detecting the failure.
