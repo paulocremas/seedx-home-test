@@ -1,6 +1,6 @@
 1. [Python Data Extraction and Processing](#python)
 2. [Data Modeling and SQL](#data)
-3. [Interview Questions] (#interview)
+3. [Interview Questions](#interview)
 
 <a id="python"></a>
 # Python Data Extraction and Processing
