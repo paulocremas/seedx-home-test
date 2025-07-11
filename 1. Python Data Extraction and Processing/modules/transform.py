@@ -1,7 +1,7 @@
 from config import Sale
 
 
-def Transform(sale):
+def transform(sale):
     return Sale(
         SALE_ID=sale["sale_id"],
         SALE_DATE=sale["sale_date"],

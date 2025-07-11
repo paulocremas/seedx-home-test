@@ -3,7 +3,7 @@ from pandas import concat, DataFrame
 from typing import List
 
 from config import API, DATA_TO_INSERT
-from modules.transform import Transform
+from modules.transform import transform
 
 # Creates an object with all API request information
 API = API()
@@ -58,7 +58,7 @@ def extract():
                     DATA_TO_INSERT.DATA = concat(
                         [
                             DATA_TO_INSERT.DATA,
-                            DataFrame([Transform(sale)]),
+                            DataFrame([transform(sale)]),
                         ],
                         ignore_index=True,
                     )

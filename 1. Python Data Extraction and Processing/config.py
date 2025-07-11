@@ -7,8 +7,8 @@ class API:
     def __init__(self):
         self.ENDPOINT = "https://api.crm.com/v1/sales"
         self.HEADERS = {"Authorization": f"Bearer {os.getenv('API_KEY')}"}
-        self.DAYS_TO_EXTRACT = 1
         self.PARAMS = {"date": "", "page": 1, "limit": 100}
+        self.DAYS_TO_EXTRACT = 5
 
 
 class Sale:
