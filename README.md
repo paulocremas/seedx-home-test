@@ -30,21 +30,21 @@ This module has __4 classes__
 ### [Extract](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/extract.py)
 This module has __3 functions__
 
-1. __extract:__ Iterates over the last N days (from config), resets API pagination per day, fetches sales pages via API calls, skips duplicates using a set of sale IDs, transforms valid sales, and appends them to DATA_TO_INSERT.
+1. __extract:__ iterates over the last N days (from config), resets API pagination per day, fetches sales pages via API calls, skips duplicates using a set of sale IDs, transforms valid sales, and appends them to DATA_TO_INSERT.
 
-2. __get_last_n_days:__ Returns a list of the last N dates (including today) in YYYY-MM-DD format.
+2. __get_last_n_days:__ returns a list of the last N dates (including today) in YYYY-MM-DD format.
 
-3. __get_sales:__ Executes an API request using the current API configuration.
+3. __get_sales:__ executes an API request using the current API configuration.
 
 ### [Transform](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/transform.py)
 This module has __1 function__
 
-1. __transform:__ Converts a raw sale dictionary into a Sale object with defined attributes, then returns its dictionary representation.
+1. __transform:__ converts a raw sale dictionary into a Sale object with defined attributes, then returns its dictionary representation.
 
 ### [Load](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/modules/load.py)
 This module has __1 function__
 
-1. __load:__ Checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
+1. __load:__ checks if there is data to insert; if so, initializes a BigQuery client and loads the DATA_TO_INSERT DataFrame into the configured BigQuery table, waiting for the job to complete.
 <br>
 
 #### [Dockerfile](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/Dockerfile)
@@ -71,8 +71,8 @@ Uses a CTE to set comparison months, then aggregates monthly metrics for client_
 A: These are some approachs I would try
 * Monitoring and identifing heavy queries
 * Query review and optimzation
-* Partitioning and Clustering
-* Cost Control by setting up cost alerts and budget tracking
+* Partitioning and clustering
+* Cost control by setting up cost alerts and budget tracking
 
 #### 2. We handle data needs of several clients, and each one needs different data sources. Some sources may overlap (for example, many clients need data from Google Ads and Meta Ads), but in other cases we need client-specific sources. How do you envision the database structure we need to make it easily maintainable and scalable?
 A: I map all equivalent fields across sources and structure the data using a unified schema for all clients, using a client_id field to differentiate them.
