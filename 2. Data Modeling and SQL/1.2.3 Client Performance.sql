@@ -25,7 +25,7 @@ agg AS (
         month
     )
 SELECT
-  month,
+    month,
     impressions,
     clicks,
     cost,
