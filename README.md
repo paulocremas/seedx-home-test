@@ -19,7 +19,7 @@ __Note:__ Logs and error handling were left out given the test nature of the pro
 ### [Config](https://github.com/paulocremas/seedx-home-test/blob/main/1.%20Python%20Data%20Extraction%20and%20Processing/config.py)
 This module has __4 classes__
 
-1. __API:__ stores endpoints, parameters (e.g. for pagination), and extraction range (e.g. number of days).
+1. __API:__ stores endpoints, parameters (for pagination), and extraction range (number of days).
 
 2. __Sale:__ defines the attributes required to ensure schema compatibility and allows definitive information to be inserted with each sale (e.g. self.crm_id = 1).
 
