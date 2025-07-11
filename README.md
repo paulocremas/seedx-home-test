@@ -82,7 +82,7 @@ A: I would store multiple records per campaign, each with a validity period defi
 
 #### 4. Imagine one of your daily data pipelines (either a Coupler/Airbyte sync or a custom Python Cloud Run Job) fails unexpectedly. This could be due to a source system outage, API changes, or a bug in the code. Describe your process for:
 #### A. Detecting the failure.
-A: I rely on alerts from Airbyte or Cloud Monitoring (for Cloud Run jobs), check centralized logs, success flags, and data validations in BigQuery (e.g., missing or incomplete data).
+A: I rely on alerts from Airbyte or Cloud Monitoring (for Cloud Run jobs), check centralized logs, success flags, and data validations in BigQuery.
 #### B. Diagnosing the root cause.
 A: I review error logs or config changes. For source issues, I check API responses or source system status. For data issues, I compare with previous runs.
 #### C. Implementing a fix.
